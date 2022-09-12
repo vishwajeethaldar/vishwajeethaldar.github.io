@@ -1,6 +1,7 @@
+
 let styles = {
        activeStyle:{
-        color:"#ff0000"
+        color:"#4164D7"
        }
        ,
        inActiveStyle:{

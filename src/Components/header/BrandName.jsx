@@ -6,7 +6,7 @@ export const BrandName = ({brandName, size, font, color}) => {
   return (
     <Box>
          <Link to="/">
-            <Text fontSize={size} fontFamily={font} color={color} > { brandName } </Text>
+            <Text fontSize={size} fontFamily={font} color={color} fontWeight="600" > { brandName } </Text>
          </Link>
     </Box>
   )

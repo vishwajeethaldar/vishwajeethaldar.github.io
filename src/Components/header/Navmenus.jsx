@@ -1,37 +1,23 @@
-import { Flex } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import React from 'react'
-
 import {MenuLink} from './MenuLink'
+import { ToggleMode } from './ToggleMode'
+import menus from './menus';
+import { useContext } from 'react';
 
-const menus = [
-  {
-    id:1,
-    path:"/",
-    name:"Home"
-  },
-  {
-    id:2,
-    path:"/skills",
-    name:"Skills"
-  },
-  {
-    id:3,
-    path:"/projects",
-    name:"Projects"
-  },
-  {
-    id:4,
-    path:"/contact",
-    name:"Contact"
-  }
 
-]
 export const Navmenus = ({diection}) => {
+ 
   return (
-    <Flex direction={diection} gap={"20px"}>
+    <Flex w={"100%"} direction={diection} gap={["0", "0","10px","10px"]} align={["flex-start","flex-start", "center", "center"]}>
       {menus.map((menu)=>{
-        return <MenuLink linkname={menu.name} linkpath={menu.path} key={menu.path} size={['1em','1em','1.2em','1.2em']}/>
+        return <Box key={menu.id} w="100%" py={["5px","5px","15px","15px"]} >
+                <MenuLink linkname={menu.name} linkpath={menu.path}  size={['1em','1em','1.2em','1.2em']}/>
+               </Box>
       })}
+    <Box display={["none","none","block", "block"]}>
+        <ToggleMode/>
+    </Box>
     </Flex>
   )
 }
