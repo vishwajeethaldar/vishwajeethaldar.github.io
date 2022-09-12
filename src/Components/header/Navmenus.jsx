@@ -3,7 +3,7 @@ import React from 'react'
 import {MenuLink} from './MenuLink'
 import { ToggleMode } from './ToggleMode'
 import menus from './menus';
-import { useContext } from 'react';
+
 
 
 export const Navmenus = ({diection}) => {

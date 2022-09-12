@@ -6,7 +6,7 @@ import { ReferanceLinks } from "./ReferanceLinks"
 
 export const Footer = () => {
   const bgcolor = useColorModeValue("#ddd", "rgba(26,32,44, 0.5)")
-  const {bg, border} = useContext(AppContext)
+  const {border} = useContext(AppContext)
   return (
     <Flex bg={bgcolor} direction={"column"} align="center" w={"100%"} mt="50px" gap="20px" pt="50px" borderTop={`1px solid ${border}`}>
         <Box>
