@@ -1,11 +1,14 @@
+import { textDecoration } from "@chakra-ui/react"
 
 let styles = {
        activeStyle:{
-        color:"#4164D7"
-       }
-       ,
+        color:"#aaa"
+       },
+       borderColor:{
+             color:"#eee"  
+       },
        inActiveStyle:{
-        
+        color:"#66FCF1"
        }
 }
 

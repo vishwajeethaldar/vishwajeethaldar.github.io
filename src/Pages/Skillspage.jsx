@@ -1,18 +1,20 @@
 import { Box, GridItem, SimpleGrid } from "@chakra-ui/react"
+import { useContext } from "react"
 import { Footer } from "../Components/footer/Footer"
 import { Header } from "../Components/header/Header"
+import { Skills } from "../Components/Skills/Skills"
+import { AppContext } from "../Context/AppContext"
 
 
 export const Skillspage = () => {
+  const {bgColor} = useContext(AppContext)
   return (
-    <Box>
-       <Box position={"sticky"} top={0}>
-            <Header />  
-        </Box>
+    <Box bg={bgColor}>
+        <Header position={"sticky"} zindex={9999} top={0} />  
 
       <SimpleGrid >
         <GridItem>
-         
+         <Skills/>
         </GridItem>
 
         <GridItem  >

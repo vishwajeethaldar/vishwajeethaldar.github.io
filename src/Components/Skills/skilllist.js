@@ -1,0 +1,66 @@
+let root = process.env.PUBLIC_URL
+const skillsList = [
+    {
+        id:1,
+        title:"HTML5",
+        image:`${root}/logo/html5.svg`,
+        url:"#"
+    },
+    {
+        id:2,
+        title:"CSS3",
+        image:`${root}/logo/css3.svg`,
+        url:"#"
+    },
+    {
+        id:3,
+        title:"JavaScript",
+        image:`${root}/logo/js.svg`,
+        url:"#"
+    },
+    {
+        id:4,
+        title:"React",
+        image:`${root}/logo/react.svg`,
+        url:"#"
+    },
+    {
+        id:5,
+        title:"Redux",
+        image:`${root}/logo/redux.svg`,
+        url:"#"
+    },
+    {
+        id:6,
+        title:"Express",
+        image:`${root}/logo/express.svg`,
+        url:"#"
+    },
+    {
+        id:7,
+        title:"NodeJS",
+        image:`${root}/logo/nodejs.svg`,
+        url:"#"
+    },
+    {
+        id:8,
+        title:"MongoDB",
+        image:`${root}/logo/mongodb.svg`,
+        url:"#"
+    },
+    {
+        id:9,
+        title:"Git",
+        image:`${root}/logo/github.svg`,
+        url:"#"
+    }
+    ,
+    {
+        id:10,
+        title:"DS & Algorithm",
+        image:`${root}/logo/dsa.png`,
+        url:"#"
+    }
+]
+
+export default skillsList

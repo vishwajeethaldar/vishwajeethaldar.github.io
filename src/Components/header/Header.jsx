@@ -7,16 +7,16 @@ import { Show } from '@chakra-ui/react'
 import { useContext } from 'react';
 import {AppContext} from '../../Context/AppContext';
 
-export const Header = () => {
+export const Header = ({position, top, zindex}) => {
   const [showmenu, setshowMenu] =  useState(false)
-  const {bg, border} = useContext(AppContext)
+  const {bgColor, borderColor, color} = useContext(AppContext)
 
   return (
-    <Stack w={"100%"} mx={"auto"} boxShadow={[showmenu===false?"none":"lg",showmenu===false?"none":"lg", "none", "none"]} pb={showmenu===false?"0px":"15px"} backdropFilter={"blur(10px)"}>
-      <Flex w="100%" px="20px" align={"center"} justify={["space-between"]}  bg={bg} backdropFilter={"blur(10px)"} borderBottom={`1px solid ${border}`}> 
+    <Box  bg={bgColor} position={position} zIndex={zindex} top={top} w={"100%"} mx={"auto"} boxShadow={[showmenu===false?"none":"lg",showmenu===false?"none":"lg", "none", "none"]} pb={showmenu===false?"0px":"15px"} backdropFilter={"blur(10px)"} >
+      <Flex  bg={bgColor} w="100%" px="20px" align={"center"} justify={["space-between"]}   backdropFilter={"blur(10px)"} borderBottom={`1px solid ${borderColor}`} > 
         {/* Brand Text Webiste Name */}
           <Box>
-            <BrandName brandName={"VH"} size={{base:"1.2em", sm:"1.2em", md:"1.4em", lg:"1.6em"}} />
+            <BrandName color={color} brandName={"VISHWAJEET HALDAR"} size={{base:"1.2em", sm:"1.2em", md:"1.4em", lg:"1.6em"}} />
           </Box>
 
           {/* Menus for Large and Medium Size Screen */}
@@ -39,6 +39,6 @@ export const Header = () => {
               <Navmenus diection={"column"}/>
         </Collapse>
       </Show>
-    </Stack>
+    </Box>
   )
 }
