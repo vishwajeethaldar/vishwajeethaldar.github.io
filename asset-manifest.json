@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.5157fb20.js",
+    "main.js": "/static/js/main.4089b7d1.js",
     "static/js/787.9e9ba52d.chunk.js": "/static/js/787.9e9ba52d.chunk.js",
     "static/media/Vishwajeet-Haldar-Resume.pdf": "/static/media/Vishwajeet-Haldar-Resume.5b7e4c2c4bdd8a8fe185.pdf",
     "index.html": "/index.html",
-    "main.5157fb20.js.map": "/static/js/main.5157fb20.js.map",
+    "main.4089b7d1.js.map": "/static/js/main.4089b7d1.js.map",
     "787.9e9ba52d.chunk.js.map": "/static/js/787.9e9ba52d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.5157fb20.js"
+    "static/js/main.4089b7d1.js"
   ]
 }
