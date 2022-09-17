@@ -12,7 +12,7 @@ export const Skills = () => {
        <Flex justify={"center"} mx={"auto"} gap={["15xp", "15px", "20px", "20px"]} w={["96%", "96%", "80%", "80%"]} flexWrap="wrap">
         {skillsList.map((skill)=>{
             return (
-              <Box key={skill.id} w={["40%","40%","20%","18%"]} boxShadow={"xl"} mx="1%" my="2%">
+              <Box key={skill.id} w={["40%","40%","20%","18%"]}  boxShadow={"0px 0px 8px #ccc"} mx="1%" my="2%">
                 <Sikll image={skill.image} title={skill.title} url={skill.url} />
               </Box>
             )

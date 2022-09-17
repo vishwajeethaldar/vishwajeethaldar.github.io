@@ -6,9 +6,9 @@ export const ReferanceLinks = () => {
     <Flex gap="20px">
             {sociallinks.map((link)=>{
                 return (
-                    <Box key={link.id} pb="10px">
+                    <Box key={link.id} pb="10px" border={"1px solid #ddd"} h="40px">
                         <a href={link.path} target="_blank" rel="noreferrer">
-                            <Image w="40px" src={link.image}/>
+                            <Image w="37px" h={"38px"} src={link.image}/>
                         </a>
                     </Box>
                 )

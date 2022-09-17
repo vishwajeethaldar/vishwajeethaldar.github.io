@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "dotenv": "^16.0.2",
+    "emailjs-com": "^3.2.0",
     "file-saver": "^2.0.5",
     "framer-motion": "^7.3.2",
     "react": "^18.2.0",

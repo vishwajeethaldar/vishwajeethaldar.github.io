@@ -12,22 +12,12 @@ export const Skillspage = () => {
     <Box bg={bgColor}>
         <Header position={"sticky"} zindex={9999} top={0} />  
 
-      <SimpleGrid >
-        <GridItem>
-         <Skills/>
-        </GridItem>
-
-        <GridItem  >
-        
-
-        </GridItem >
-
-        <GridItem >
-          <Box>
-              <Footer/>
-          </Box>
-        </GridItem>
-      </SimpleGrid>
+        <Box>
+          <Skills/>
+        </Box>
+        <Box>
+            <Footer/>
+        </Box>
     </Box>
   )
 }
