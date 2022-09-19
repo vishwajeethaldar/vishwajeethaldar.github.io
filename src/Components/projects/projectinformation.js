@@ -122,7 +122,7 @@ export const  projectinformations = [
             }
             
         ],
-        images:[`${root}/projectImages/crickbuzz/1.jpg`, `${root}/projectImages/crickbuzz/2.jpg`,`${root}/projectImages/crickbuzz/3.jpg`, `${root}/projectImages/crickbuzz/4.jpg`],
+        images:[`${root}/projectImages/wrike/1.jpg`, `${root}/projectImages/wrike/2.jpg`,`${root}/projectImages/wrike/3.jpg`, `${root}/projectImages/wrike/4.jpg`],
         description:"Wrike, Inc. is an American project management application service provider based in San Jose, California. Wrike also has offices in Dallas, Tallin, Nicosia, Dublin, Tokyo, Melbourne and Prague.",
         links:[
             {
