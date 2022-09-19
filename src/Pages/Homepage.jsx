@@ -14,7 +14,7 @@ export const Homepage = () => {
   const {bgColor} = useContext(AppContext)
 
   return (
-    <Box w="100%" bg={bgColor}>
+    <Box w="100%" bg={bgColor} _hover={{cursor:"cell"}}>
       
         <Header position={"sticky"} zindex={9999} top={0} />  
         <Banner/>

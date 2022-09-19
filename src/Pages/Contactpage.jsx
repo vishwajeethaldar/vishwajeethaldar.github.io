@@ -11,8 +11,8 @@ export const Contactpage = () => {
   const {bgColor} = useContext(AppContext)
 
   return (
-    <Box bg={bgColor}>
-       <Box position={"sticky"} top={0}>
+    <Box bg={bgColor} _hover={{cursor:"cell"}}>
+       <Box position={"sticky"} top={0} zIndex={9999}>
             <Header />  
         </Box>
       <Box my="20px">

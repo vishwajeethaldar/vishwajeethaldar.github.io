@@ -96,5 +96,47 @@ export const  projectinformations = [
             link:"https://www.cricbuzz.com/"
             }
        ],
+    },
+    {
+        id:3,
+        projectTitle:"Wrike Clone",
+        type:"Group Project",
+        
+        techstack:[
+            {
+                id:1,
+                title:"HTML5",
+                image:`${root}/logo/html5.svg`,
+            },
+            {
+                id:2,
+                title:"CSS3",
+                image:`${root}/logo/css3.svg`,
+
+            },
+            {
+                id:3,
+                title:"JavaScript",
+                image:`${root}/logo/js.svg`,
+
+            }
+            
+        ],
+        images:[`${root}/projectImages/crickbuzz/1.jpg`, `${root}/projectImages/crickbuzz/2.jpg`,`${root}/projectImages/crickbuzz/3.jpg`, `${root}/projectImages/crickbuzz/4.jpg`],
+        description:"Wrike, Inc. is an American project management application service provider based in San Jose, California. Wrike also has offices in Dallas, Tallin, Nicosia, Dublin, Tokyo, Melbourne and Prague.",
+        links:[
+            {
+            linkTitle:"GitHub",
+            link:"https://github.com/vishwajeethaldar/wrike-clone"
+            },
+            {
+            linkTitle:"Live",
+            link:"https://vishwajeethaldar.github.io/wrike-clone/"
+            },
+            {
+            linkTitle:"Offical Website",
+            link:"https://www.wrike.com/"
+            }
+       ],
     }
 ]

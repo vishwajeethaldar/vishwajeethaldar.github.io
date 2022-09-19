@@ -10,7 +10,7 @@ import { AppContext } from '../Context/AppContext'
 export const Projectspage = () => {
   const {bgColor} = useContext(AppContext)
   return (
-    <Box bg={bgColor}>
+    <Box bg={bgColor} _hover={{cursor:"cell"}}>
      
     <Box position={"sticky"} top={0} zIndex={9999}>
          <Header />  
