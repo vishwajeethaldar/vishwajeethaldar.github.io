@@ -18,7 +18,7 @@ export const About = () => {
         </Flex>
 
         <Box w={["100%"]} px={["9%", "9%" ,"14%", "20%"]} py="20px">
-                <Text align={"center"} fontSize={["1em"]}>
+                <Text align={"center"} fontSize={["1.2em"]}>
                 Passion-driven learner and a web developer with the ability to write clean, reusable, optimised code. Skilled in MERN Stack,proficient in working with teams and executing goal-oriented projects. Looking forward to joining a progressive and challenging work environment.
                 </Text>
         </Box>
