@@ -14,7 +14,7 @@ export const Project = ({project, links=[]}) => {
     if(slide.current===null){
       slide.current = setInterval(()=>{
         setCount(count=>count===images.length-1?0:count+1)
-      }, 2000)
+      }, 5000)
     }
   }
 

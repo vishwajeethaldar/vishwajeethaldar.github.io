@@ -64,7 +64,7 @@ export const Skills = () => {
             Github Calender 
         </Text>
        </Box>
-        <Box py={"20px"} boxShadow={"outline"} mt={"25px"} mx={"auto"}  w={["96%", "96%", "80%", "80%"]} px={["15xp", "15px", "20px", "10px"]}>
+        <Box py={"20px"} mt={"25px"} mx={"auto"}  w={["96%", "96%", "80%", "80%"]} px={["15xp", "15px", "20px", "10px"]}>
             <GitHubCalendar username='vishwajeethaldar' />
         </Box>
     </Box>
