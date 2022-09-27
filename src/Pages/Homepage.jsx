@@ -3,13 +3,11 @@ import { useContext } from 'react';
 import { About } from '../Components/Aboutme/About';
 import { Footer } from '../Components/footer/Footer';
 import {Header} from '../Components/header/Header';
-import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 import { Banner } from '../Components/TopBanner/Banner';
 import { AppContext } from '../Context/AppContext';
 import { ContactForm } from '../Components/Contact/ContactForm';
 import { ReferanceLinks } from '../Components/footer/ReferanceLinks';
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
-
 
 export const Homepage = () => {
  
@@ -61,6 +59,8 @@ export const Homepage = () => {
           <Box>
               <Footer/>
           </Box>
+
+      
     </Box>
    
   )

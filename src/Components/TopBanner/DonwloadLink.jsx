@@ -10,7 +10,7 @@ const saveFile=()=>{
 }
   return (
     
-       <Button _hover={{bg:"none"}}variant={"outline"}  colorScheme={"twitter"} onClick={saveFile}>
+       <Button _hover={{bg:"none", transform:"scale(.98)", color:"#959"}} variant={"outline"}  colorScheme={"twitter"} onClick={saveFile}>
         {/* <Link to={path} target={"_blank"} download={true}> */}
             <Text>
                   <DownloadIcon/> {title}

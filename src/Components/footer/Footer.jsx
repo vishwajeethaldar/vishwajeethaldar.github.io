@@ -13,10 +13,10 @@ export const Footer = () => {
           <ReferanceLinks/>
         </Box>
         <Flex direction="row" gap={"20px"}>
-            <Link to="/"> Home </Link>
-            <Link to="/skills"> Skills </Link>
-            <Link to="/projects"> Projects </Link>
-            <Link to="/contact"> Contact </Link>
+            <Link to="/"> <Text _hover={{color:"red"}}>Home </Text></Link>
+            <Link to="/skills"> <Text _hover={{color:"red"}}>Skills </Text></Link>
+            <Link to="/projects"> <Text _hover={{color:"red"}}>Projects</Text> </Link>
+            <Link to="/contact"> <Text _hover={{color:"red"}}>Contact</Text> </Link>
         </Flex>
 
         <Box borderTop={"1px solid #ccc"} w="100%">

@@ -16,7 +16,7 @@ export const Header = ({position, top, zindex}) => {
       <Flex  bg={bgColor} w="100%" px="20px" align={"center"} justify={["space-between"]}   backdropFilter={"blur(10px)"} borderBottom={`1px solid ${borderColor}`} > 
         {/* Brand Text Webiste Name */}
           <Box>
-            <BrandName color={color} brandName={"VISHWAJEET HALDAR"} size={{base:"1.2em", sm:"1.2em", md:"1.4em", lg:"1.6em"}} />
+            <BrandName color={color} brandName={"VH"} size={{base:"1.2em", sm:"1.2em", md:"1.4em", lg:"1.6em"}} />
           </Box>
 
           {/* Menus for Large and Medium Size Screen */}

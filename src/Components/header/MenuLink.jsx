@@ -1,6 +1,5 @@
 import { Box, Text } from "@chakra-ui/react"
-import { useEffect, useState } from "react"
-import { useRef } from "react"
+
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { AppContext } from "../../Context/AppContext"
@@ -11,7 +10,7 @@ export const MenuLink = ({linkpath, linkname, size, family, transform}) => {
   return (
     <Box minWidth={"100px"}>
         <NavLink  to={linkpath} style={({isActive})=>isActive?active.activeStyle:undefined}>
-               <Text  mx="auto" w ={["50%","50%","100%","100%"]}  lineHeight={["40px","40px","60px","60px"]} px="10px" fontSize={size} align={["center", "center", "",""]} fontFamily={family}  textTransform={transform}>
+               <Text _hover={{color:"#582", fontWeight:"700", transition:"all linear .1s"}}  mx="auto" w ={["50%","50%","100%","100%"]}  lineHeight={["40px","40px","60px","60px"]} px="10px" fontSize={size} align={["center", "center", "",""]} fontFamily={family}  textTransform={transform}>
                 {linkname}
                </Text>
         </NavLink>

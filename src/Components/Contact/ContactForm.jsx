@@ -45,7 +45,7 @@ export const ContactForm = () => {
 
             <Flex justify={"flex-start"} align={"center"} mt={"10px"}>
             <Text w={"20%"}>  </Text>
-                <Input w="150px" type={"submit" } value="Send" _hover={{cursor:"pointer"}} />
+                <Input w="150px" type={"submit" } value="Send" _hover={{cursor:"pointer", color:"#925", fontWeight:"700", border:"2px solid #999"}} />
             </Flex>
            
         </form>

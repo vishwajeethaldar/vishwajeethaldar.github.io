@@ -1,4 +1,4 @@
-import { Box, GridItem, SimpleGrid } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import { useContext } from "react"
 import { Footer } from "../Components/footer/Footer"
 import { Header } from "../Components/header/Header"
@@ -14,6 +14,7 @@ export const Skillspage = () => {
 
         <Box>
           <Skills/>
+          
         </Box>
         <Box>
             <Footer/>

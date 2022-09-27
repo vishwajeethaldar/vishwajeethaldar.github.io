@@ -2,6 +2,7 @@
 import { Box, Flex, Image, Text, useColorModeValue } from "@chakra-ui/react"
 import { DonwloadLink } from "./DonwloadLink"
 import pdf from '../../docs/Vishwajeet-Haldar-Resume.pdf'
+import { Type } from "./Type"
 
 
 let root = process.env.PUBLIC_URL
@@ -22,7 +23,7 @@ const textColor = useColorModeValue("#9BFDFF", "#19fbff")
                     </Text>
 
                     <Text color={textColor}>
-                        Learner | Full Stack Web Developer
+                       <Type />
                     </Text>
                     
                    <Box py="15px">
