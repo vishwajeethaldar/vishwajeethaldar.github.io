@@ -1,7 +1,76 @@
 const root = process.env.PUBLIC_URL
+
 export const  projectinformations = [
-    {
+        {
             id:1,
+            projectTitle:"clokify.me Clone",
+            type:"Group Project",
+            techstack:[
+                {
+                    id:1,
+                    title:"HTML5",
+                    image:`${root}/logo/html5.svg`,
+                },
+                {
+                    id:2,
+                    title:"CSS3",
+                    image:`${root}/logo/css3.svg`,
+
+                },
+                {
+                    id:3,
+                    title:"JavaScript",
+                    image:`${root}/logo/js.svg`,
+
+                },
+                {
+                    id:4,
+                    title:"React",
+                    image:`${root}/logo/react.svg`,
+
+                },
+                {
+                    id:5,
+                    title:"Chakra UI",
+                    image:`${root}/logo/chakra-ui.png`,
+
+                },
+                {
+                    id:5,
+                    title:"TypeScript",
+                    image:`${root}/logo/ts.png`,
+
+                },
+                {
+                    id:5,
+                    title:"ReduxToolkit",
+                    image:`${root}/logo/redux_tool.svg`,
+
+                }
+
+                
+            ],
+        
+            images:[`https://github.com/vishwajeethaldar/vishwajeethaldar/raw/main/ProjectImages/Clokify_Clone/jpg/Home.jpg?raw=true`, `https://github.com/vishwajeethaldar/vishwajeethaldar/raw/main/ProjectImages/Clokify_Clone/jpg/Signup.jpg?raw=true`,`https://github.com/vishwajeethaldar/vishwajeethaldar/raw/main/ProjectImages/Clokify_Clone/jpg/Time_Tracker.jpg?raw=true`, `https://github.com/vishwajeethaldar/vishwajeethaldar/raw/main/ProjectImages/Clokify_Clone/jpg/Project.jpg?raw=true`],
+            description:"This project is clone of clockify.me website. clockify.me is a popular website which provides free time tracking app that lets you track work hours across projects.",
+            links:[
+                {
+                linkTitle:"GitHub",
+                link:"https://github.com/vishwajeethaldar/main-brake-9977"
+                },
+                {
+                linkTitle:"Live",
+                link:"https://effortless-smakager-c491a1.netlify.app/"
+                },
+                {
+                linkTitle:"Offical Website",
+                link:"https://www.clockify.me/"
+                }
+        ],
+                        
+    },
+    {
+            id:2,
             projectTitle:"DNA India Clone",
             type:"Individual Project",
             techstack:[
@@ -56,7 +125,7 @@ export const  projectinformations = [
                         
     },
     {
-        id:2,
+        id:3,
         projectTitle:"CrickBuzz Clone",
         type:"Group Project",
         
@@ -98,7 +167,7 @@ export const  projectinformations = [
        ],
     },
     {
-        id:3,
+        id:4,
         projectTitle:"Wrike Clone",
         type:"Group Project",
         

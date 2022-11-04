@@ -13,4 +13,4 @@ function Type() {
   );
 }
 
-export {Type};
+export default Type;
