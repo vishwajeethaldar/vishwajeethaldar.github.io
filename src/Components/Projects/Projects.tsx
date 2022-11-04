@@ -85,7 +85,7 @@ export default function Projects() {
 
         
 
-        <Flex justify={"center"} py={"15px"} gap={"10px"} border={`1px solid ${themeColor().color4}`} pb={"10px"}>
+        <Flex justify={"center"} py={"15px"} gap={"10px"}  pb={"10px"}>
         
             <Box>
                 <Button px={"0"} borderRadius={"2px"} color={'#fff'} fontWeight={"900"}  colorScheme={"linkedin"} _hover={{color:"orange"}} onClick={prevProject}>

@@ -1,5 +1,5 @@
 import {Route, Routes} from "react-router-dom"
-import { ConatctP, HomeP, ProjectP, SkillsP } from "../Pages"
+import HomeP from "../Pages/Home"
 
 const MainRoutes = () => {
   return (

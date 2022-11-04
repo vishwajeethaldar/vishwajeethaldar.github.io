@@ -6,6 +6,7 @@ import {ImCross} from 'react-icons/im'
 import themeColor from '../../utils/Colors'
 import ToggleTheme from '../../utils/ToggleTheme'
 import Menus from './Menus'
+import {props} from '../Nav/StickyNav'
 
 export default function MobileNav({selected, setSelected}:{selected:string, setSelected:Function}) {
     const [showNav, setShowNav] = useState(false)
