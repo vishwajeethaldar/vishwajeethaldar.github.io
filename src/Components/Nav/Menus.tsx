@@ -33,7 +33,7 @@ const Menus = ({selected, setSelected}:{selected:string, setSelected:Function}) 
   };
 
   let inActiveStyle = {
-    color:themeColor().color1
+    
   }
 
   const jumpToReleventDiv = (id:string) => {
@@ -46,12 +46,12 @@ const Menus = ({selected, setSelected}:{selected:string, setSelected:Function}) 
 
  
   return (
-    <Flex py={"15px"} gap={"20px"} direction={["column", "column","row", "row"]} align={"center"}>
+    <Flex color={themeColor().color1} py={"15px"} gap={"20px"} direction={["column", "column","row", "row"]} align={"center"}>
 
         {menuslist?.map((menu)=>{
           return (
-            <Box key={menu.id}  _hover={{cursor:"pointer"}}  onClick={()=>jumpToReleventDiv(menu.id)}>
-              <Text fontFamily={'serif,PT Serif'} onClick={()=>setSelected(menu.id)} fontSize={["14px","16px","18px","20px"]} style={selected===menu.id?activeStyle:inActiveStyle} _hover={{color:themeColor().hoverColor1}} fontWeight={"500"}>
+            <Box key={menu.id}   onClick={()=>jumpToReleventDiv(menu.id)}>
+              <Text fontFamily={'serif,PT Serif'} onClick={()=>setSelected(menu.id)} fontSize={["14px","16px","18px","20px"]} style={selected===menu.id?activeStyle:inActiveStyle}  _hover={{cursor:"pointer",color:themeColor().hoverColor1}}fontWeight={"500"}>
                 {menu.name} 
               </Text>
             </Box>

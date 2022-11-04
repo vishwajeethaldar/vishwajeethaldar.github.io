@@ -27,22 +27,22 @@ export const ContactForm = () => {
         <form >
             <Flex justify={"flex-start"} align={"center"} mt={"10px"}>
                 <Text  color={themeColor().color1} w={"25%"}> Name : </Text>
-                <Input border={"1px solid #c95"} type={"text"} placeholder="Name" required={true} name="from_name"/>
+                <Input  type={"text"} placeholder="Name" required={true} name="from_name"/>
             </Flex>
 
             <Flex justify={"flex-start"} align={"center"} mt={"10px"}>
                 <Text color={themeColor().color1} w={"25%"}> Email : </Text>
-                <Input border={"1px solid #c95"} outline={"1px solid #124"} type={"email"} placeholder="email"  required={true} name="from_email"/>
+                <Input  type={"email"} placeholder="email"  required={true} name="from_email"/>
             </Flex>
 
             <Flex justify={"flex-start"} align={"center"} mt={"10px"}>
                 <Text color={themeColor().color1} w={"25%"}> Subject : </Text>
-                <Input border={"1px solid #c95"} type={"text"} placeholder="subject"  required={true} name="from_subject"/>
+                <Input  type={"text"} placeholder="subject"  required={true} name="from_subject"/>
             </Flex>
 
             <Flex justify={"flex-start"} align={"center"} mt={"10px"}>
                 <Text color={themeColor().color1} w={"25%"}> Message : </Text>
-                <Textarea border={"1px solid #c95"} placeholder='Message' required={true} name="message"/>
+                <Textarea  placeholder='Message' required={true} name="message"/>
             </Flex>
 
             <Flex justify={"flex-start"} align={"center"} mt={"10px"}>
