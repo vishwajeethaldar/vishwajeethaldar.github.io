@@ -11,7 +11,7 @@ export default function ProjectItem({project}:{project:any}) {
   const ref = useRef(null)
   const invieRef = useInView(ref)
   return (
-    <Flex style={invieRef?insideview:outside} ref={ref} borderRadius={["10px 10px 00px 0px","10px 10px 0px 0px","50px 0px 50px 0px","50px 0px 50px 0px"]} gap={"10px"} align={["center","center","center","center"]}  justify={["center","center","center","center"]}     minW={"100%"} minH={"100%"} direction={["column","column","row",'row']} border={`1px solid ${themeColor().color2}`}>
+    <Flex style={invieRef?insideview:outside} ref={ref} borderRadius={["10px 10px 00px 0px","10px 10px 0px 0px","50px 0px 50px 0px","50px 0px 50px 0px"]} gap={"10px"} align={["center","center","center","center"]}  justify={["center","center","center","center"]}     minW={"100%"}  direction={["column","column","row",'row']} border={`1px solid ${themeColor().color2}`} pb={["10px","10px","0px","0px"]}>
                     <Box w={["90%","90%","40%","40%"]} pt={"20px"}>
                         
                         <Box  mb={"10px"} w={["96%", "96%", "80%", "80%"]} >
@@ -34,7 +34,7 @@ export default function ProjectItem({project}:{project:any}) {
                             })}
                         </Flex>
                         
-                        <Flex py={["5px","5px","10px","10px"]} flexWrap={"wrap"} gap={"10px"}>
+                        <Flex py={["0px","0px","10px","10px"]} flexWrap={"wrap"} gap={"10px"}>
                             {project.links.map((link:any)=>{
                                 return (
                                     <Box key={link?.linkTitle}  h={"100px"}>
