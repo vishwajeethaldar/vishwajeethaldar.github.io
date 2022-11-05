@@ -15,7 +15,7 @@ export default function MobileNav({selected, setSelected}:{selected:string, setS
          <Show breakpoint='(max-width: 767px)'  >
         <Flex gap="20px" justify={"space-between"} align={"center"} px={"20px"} pb={"10px"} mb={"10px"} borderBottom={`1px solid ${themeColor().shadowColor}`}>
           <Flex align={"center"} gap={"10px"} >
-            <Link to="/"><Image src={themeColor().brandLogo} alt="Brand Logo" w={"40px"}/> </Link> 
+            <a href="#home"><Image src={themeColor().brandLogo} alt="Brand Logo" w={"40px"}/> </a> 
             {/* <Link to="/"> <Text  color={themeColor().color2} fontWeight={"700"} fontSize={"26px"}>Vishwajeet Haldar</Text></Link> */}
           </Flex>
           <Flex gap={"15px"} align={"center"} >

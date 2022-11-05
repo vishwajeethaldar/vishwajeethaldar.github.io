@@ -12,7 +12,7 @@ const StickyNav = (prop:props) => {
   return (
     <Show breakpoint='(min-width: 768px)'>
         <Flex  bg={themeColor().navaBGColor} gap="20px" justify={"space-between"} align={"center"} px={"15px"} borderBottom={`1px solid ${themeColor().shadowColor}`}>
-            <a href="#Top"><Image src={themeColor().brandLogo} alt="Brand Logo" w={"40px"}/> </a>
+            <a href="#home"><Image src={themeColor().brandLogo} alt="Brand Logo" w={"40px"}/> </a>
             <Flex align={"center"} gap={"15px"}>
                 <Menus selected={prop.selected} setSelected={prop.setSelected}/>
                 <ToggleTheme />

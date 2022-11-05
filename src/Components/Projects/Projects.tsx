@@ -7,6 +7,9 @@ import ProjectImages from './ProjectImages'
 import projectslist from "./projectinformation"
 import TechStackIte from './TechStackIte'
 import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai"
+
+import ProjectItem from './ProjectItem'
+
 export default function Projects() {
     const [projectNo, setProjectNo] =  useState(0)
 
@@ -34,57 +37,22 @@ export default function Projects() {
             </Text>
         </Box>
 
-        <Flex overflow={"hidden"} px={"30px"} onScroll={()=>{
-
-        }}>
-          
-                <Flex  gap={"10px"} align={["center","center","flex-start","flex-start"]}  justify={["center","center","center","center"]}     minW={"100%"} minH={"100%"} direction={["column","column","row",'row']}>
-                    <Box w={["90%","90%","40%","40%"]}>
-                        
-                        <Box  mb={"10px"} w={["96%", "96%", "80%", "80%"]} >
-                                <Text fontFamily={'PT Serif, serif'} textTransform={"lowercase"} color={themeColor().color1} display={"inline-block"} borderBottom={"3px solid #ccc"}  fontSize={["1.2em","1.2em","1.6em","1.6em"]} fontWeight={"700"}>
-                                        {projectslist[projectNo].projectTitle}
-                                </Text>
-                        </Box>
-
-                        <Box py="10px" color={themeColor().color1}>
-                            {projectslist[projectNo].description}
-                        </Box>
-                        
-                        <Flex py="10px" flexWrap={"wrap"} gap={"10px"}>
-                            {projectslist[projectNo].techstack.map((tech)=>{
-                                return (
-                                    <Box key={tech.id} >
-                                        <TechStackIte title={tech.title} img={tech.image}/>
-                                    </Box>
-                                )
-                            })}
-                        </Flex>
-                        
-                        <Flex py={["5px","5px","10px","10px"]} flexWrap={"wrap"} gap={"10px"}>
-                            {projectslist[projectNo].links.map((link)=>{
-                                return (
-                                    <Box key={link.linkTitle}  h={"100px"}>
-                                        <Links title={link.linkTitle} link={link.link}/>
-                                    </Box>
-                                )
-                            })}
-                        </Flex>
-                        
-                    </Box>
-
-                    <Flex  justify={"center"} align={"center"} w={["100%","100%","50%","50%"]} h={"100%"} pb={"35px"}>
-                        <ProjectImages image={projectslist[projectNo].images} />
-                    </Flex>
-
-                </Flex>
+        <Flex overflow={"hidden"} direction={"column"} mx={"30px"} gap={"20px"} >
+                {
+                    projectslist.map((project, i)=>{
+                return (
+                        <ProjectItem project={project} key={project.id}/>
+                        )
+                    })
+                }
             
         </Flex>
 
         {/* Left Right Swaipe Button */}
 
         
-
+                
+        {/* 
         <Flex justify={"center"} py={"15px"} gap={"10px"}  pb={"10px"}>
         
             <Box>
@@ -105,6 +73,8 @@ export default function Projects() {
                 </Button>
             </Box>
         </Flex>
+         */}
+        
     </Box>
   )
 }

@@ -15,11 +15,28 @@ export default function themeColor(){
     const shadowColor2 = mode==="light"?"rgba(255, 255, 255, .2)":"rgba(102, 252, 241, .3)";
     const brandTitle = mode==="light"?"https://github.com/vishwajeethaldar/vishwajeethaldar/blob/main/logos/name2.png?raw=true":"https://github.com/vishwajeethaldar/vishwajeethaldar/blob/main/logos/name2.png?raw=true"; //https://github.com/vishwajeethaldar/vishwajeethaldar/blob/main/logos/name4.png?raw=true
     const hoverColor1 = mode==="light"?"#f00":"#5e9";
-    const navaBGColor = mode==="dark"?"rgba(0,0,11,.8)":"rgba(255,255,255,.9)";
-    const footerBgColor = mode==="light"?"rgba(35, 40, 50, .4)":"rgba(0, 0, 17, .9)";
-
+    const navaBGColor = mode==="dark"?"rgba(0,0,11,.96)":"rgba(255,255,255,.96)";
+    const footerBgColor = mode==="light"?"#eee":"rgba(0, 0, 17, .9)";
+    const gitStateColor = mode==="light"?"#fff":"#000011";
+    const gitStateBgColor = mode==="light"?"#fff":"#000011";
+    
     return {
-        footerBgColor,navaBGColor,bgColor,color1,brandLogo,hoverColor1, brandTitle, color2,color3,shadowColor,transparentBG,bg1,color4,shadowColor2
+        footerBgColor,
+        navaBGColor,
+        bgColor,
+        color1,
+        brandLogo,
+        hoverColor1,
+        brandTitle,
+        color2,
+        color3,
+        shadowColor,
+        transparentBG,
+        bg1,
+        color4,
+        shadowColor2,
+        gitStateColor,
+        gitStateBgColor
     }
 }
 

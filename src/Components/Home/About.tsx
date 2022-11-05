@@ -1,14 +1,28 @@
 import {Box,Text, Flex, Image} from '@chakra-ui/react'
+import { useEffect, useRef } from 'react'
 import themeColor from '../../utils/Colors'
 import Download from './Download'
 import Type from './Type'
+import { motion, useScroll, useInView} from "framer-motion"
+import {insideview, outside}  from '../style/style'
+
 
 export default function About() {
+  const scrollRef = useRef(null)
+  let ref = useRef(null)
+  let ref2 = useRef(null)
+  let inview = useInView(ref)
+  let inview2 = useInView(ref2)
+
+  useEffect(()=>{
+      console.log(inview); 
+  },[inview])
+  
   return (
     <Box  minH={"450px"}>
-         
-      <Box backgroundImage={themeColor().bg1} backgroundSize={"cover"}>
-      <Flex bg={`${themeColor().transparentBG}`} py="30px"  w="100%" justify={"center"} align="center" gap={["10px", "10px","100px","150px"]}   >
+        
+      <Box style={inview?insideview:outside} backgroundImage={themeColor().bg1} backgroundSize={"cover"}>
+      <Flex ref={ref} bg={`${themeColor().transparentBG}`} py="30px"  w="100%" justify={"center"} align="center" gap={["10px", "10px","100px","150px"]}   >
               
               <Box pl="20px"  p="30px" borderRadius={"20px"}>
                       <Flex direction={"column"} gap={"10px"}>
@@ -36,13 +50,13 @@ export default function About() {
         </Flex>
       </Box>
 
-    <Flex id="home" w={["96%","90%","80%","80%"]}  mx={"auto"}  justify={"center"} direction={"column"} my={"50px"}>
+    <Flex  style={inview2?insideview:outside} ref={ref2} id="about" w={["96%","90%","80%","80%"]}  mx={"auto"}  justify={"center"} direction={"column"} my={"50px"}>
         <Flex z-indexd={0} position={"relative"} w="100%" justify={"center"} align="center" gap="15px" pt="25px">
             <Box w={["30%","30%","30%","30%"]} borderTop={"3px double #bbb"} >
 
             </Box>
 
-            <Box>
+            <Box id={"about"}>
                 <Text fontSize={["1.4em","1.4em", "2.0em","2.4em"]} color={themeColor().color1}> About Me</Text>
             </Box>
 

@@ -23,7 +23,7 @@ export default function ProjectImages({image}:{image:Array<string>}) {
 
   return (
     <Box position={"relative"}>
-      <Image w={"100%"} h={"100%"} src={image[imageC]} alt={"project Image"}/>
+      <Image w={["100%","100%","100%","600px"]} h={["300px"]} src={image[imageC]} alt={"project Image"}/>
       <Button _hover={{bg:"none"}} onClick={prevSlide} position={"absolute"} top={"45%"} left={"0px"} colorScheme={"orange"} variant={"outline"}>
           <AiOutlineDoubleLeft/>
       </Button>

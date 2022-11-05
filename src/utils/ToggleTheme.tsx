@@ -8,10 +8,10 @@ import themeColor from './Colors'
 const ToggleTheme = () => {
     const {mode, setMode} = useContext(ThemeContext)
   return (
-    <Box borderRadius={"5px"} py={"5px"} px={"10px"} w={"50px"} textAlign={"center"} border={`1px solid ${themeColor().color2}`} _hover={{cursor:"pointer"}} onClick={()=>{
+    <Box borderRadius={"5px"} py={"5px"} color={themeColor().color2} px={"10px"} w={"50px"} textAlign={"center"}  _hover={{cursor:"pointer", transform:"scale(.9)"}} onClick={()=>{
         setMode(mode==="light"?"dark":"light")
     }} >
-        {mode==="light"?<FaMoon fontSize={"22px"} color={"#564"}/>:<FiSun color={"#fff"} fontSize={"26px"} />}
+        {mode==="light"?<FaMoon fontSize={"22px"} />:<FiSun fontSize={"26px"} />}
     </Box>
   )
 }

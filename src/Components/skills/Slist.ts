@@ -139,6 +139,12 @@ export const tools = [
         title:"GitHub",
         image:`logo/icons/github.svg`,
         url:"https://github.com/vishwajeethaldar"
+    },
+    {
+        id:2,
+        title:"VSCode",
+        image:`logo/icons/vscode.png`,
+        url:"#"
     }
     
 ]
