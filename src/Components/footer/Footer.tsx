@@ -15,7 +15,7 @@ export const Footer = () => {
         </Box>
         <Flex direction="row" gap={"20px"}>
             {menuslist?.map((menu)=>{
-               return  <a href={`#${menu.id}`}> <Text _hover={{color:"red"}} color={themeColor().color1}> {menu.name} </Text></a>
+               return  <a href={`#${menu.id}`} key={menu.id}> <Text _hover={{color:"red"}} color={themeColor().color1}> {menu.name} </Text></a>
             })}
         </Flex>
 
