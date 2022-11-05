@@ -6,14 +6,16 @@ import themeColor from '../../utils/Colors';
 
 export const ContactForm = () => {
     const [mailstatus, setMailStatus] = useState(false)
-    const  sendEmail = (event:React.FormEvent)=> {
+
+    const  sendEmail = (event:React.FormEvent<HTMLFormElement>)=> {
+       
         event.preventDefault() 
-        emailjs.sendForm('service_xpcohni', 'template_6tfh4yo', event.target, 'IHENfmxd-_6x6TKpg')
+        emailjs.sendForm('service_xpcohni', 'template_6tfh4yo', event.currentTarget, 'IHENfmxd-_6x6TKpg')
             .then((result) => {
                 setMailStatus(true)
                 setTimeout(() => {
                     setMailStatus(false)
-                    event.target.reset();
+                    event.currentTarget.reset();
                 }, 5000);
 
             }, (error) => {
