@@ -1,8 +1,58 @@
 
 
  const  projectinformations = [
-        {
+ {
             id:1,
+            projectTitle:"takeitnow",
+            type:"Group Project",
+            techstack:[
+                {
+                    id:1,
+                    title:"TypeScript",
+                    image:`logo/icons/ts.png`,
+                },
+                {
+                    id:2,
+                    title:"Next.js",
+                    image:`logo/icons/css3.svg`,
+
+                },
+                {
+                    id:3,
+                    title:"Chakra UI",
+                    image:`logo/icons/chakra-ui.jpg`,
+
+                },
+                {
+                    id:4,
+                    title:"ReduxToolkit",
+                    image:`logo/icons/redux_tool.svg`,
+
+                },
+				{
+                    id:4,
+                    title:"Mongo DB",
+                    image:``,
+
+                }
+            ],
+        
+            images:["https://github.com/vishwajeethaldar/vishwajeethaldar/blob/main/ProjectImages/takeitnow/takenowclient.gif?raw=true","https://github.com/vishwajeethaldar/vishwajeethaldar/blob/main/ProjectImages/takeitnow/takeitnowAdmin.gif?raw=true"],
+            description:"e-commenre platform, cloned based on ZARA.com which contains Latest trends in clothing for women, men & kids at TAKEITNOW online. Find new arrivals, fashion catalogs, collections.",
+            links:[
+                {
+                linkTitle:"GitHub Repo",
+                link:"https://github.com/Surya9263/flashy-burst-4121"
+                },
+                {
+                linkTitle:"Live Clone",
+                link:"https://takeitnow.vercel.app/"
+                }
+        ],
+                        
+    },
+        {
+            id:2,
             projectTitle:"clokify.me Clone",
             type:"Group Project",
             techstack:[
@@ -66,7 +116,7 @@
                         
     },
     {
-            id:2,
+            id:3,
             projectTitle:"DNA India Clone",
             type:"Individual Project",
             techstack:[
@@ -117,7 +167,7 @@
                         
     },
     {
-        id:3,
+        id:4,
         projectTitle:"CrickBuzz Clone",
         type:"Group Project",
         
@@ -155,7 +205,7 @@
        ],
     },
     {
-        id:4,
+        id:5,
         projectTitle:"Wrike Clone",
         type:"Group Project",
         
@@ -192,6 +242,7 @@
             }
        ],
     }
+
 ]
 
 
