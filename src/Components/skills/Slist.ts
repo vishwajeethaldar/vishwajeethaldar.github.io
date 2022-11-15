@@ -102,6 +102,12 @@ export const frontEnd:Array<skeleton> = [
         title:"Redux",
         image:`logo/icons/redux.svg`,
         url:"https://redux.js.org/"
+    },
+    {
+        id:6,
+        title:"NextJs",
+        image:`logo/icons/next.png`,
+        url:"https://nextjs.org/"
     }
     
 ]
@@ -126,6 +132,12 @@ export const backEnd:Array<skeleton> = [
         title:"MongoDB",
         image:`logo/icons/mongo.png`,
         url:"https://www.mongodb.com/"
+    },
+    {
+        id:4,
+        title:"NextJs",
+        image:`logo/icons/next.png`,
+        url:"https://nextjs.org/"
     }
    
 ]

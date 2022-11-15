@@ -9,11 +9,11 @@ export default function Contact() {
 
     <Box>
 
-<Box mx={"auto"} mb={"10px"} w={["96%", "96%", "80%", "80%"]} px={["15xp", "15px", "20px", "10px"]}>
-        <Text fontFamily={'PT Serif, serif'} py={"5px"} textAlign={"center"}color={themeColor().color1}  fontSize={["1.8em","1.8em","1.8em"]} fontWeight={"700"}>
-                {"Contact Me"}
-        </Text>
-    </Box>
+        <Box mx={"auto"} mb={"10px"} w={["96%", "96%", "80%", "80%"]} px={["15xp", "15px", "20px", "10px"]}>
+            <Text fontFamily={'PT Serif, serif'} py={"5px"} textAlign={"center"}color={themeColor().color1}  fontSize={["1.8em","1.8em","1.8em"]} fontWeight={"700"}>
+                    {"Contact Me"}
+            </Text>
+        </Box>
 
     <Flex w={"100%"} justify={"center"} direction={["column","column","row","row"]}>
 
@@ -38,7 +38,7 @@ export default function Contact() {
                 </Flex>
 
                 <Flex   justify={"flex-start"} align={"center"}>
-                <FcCellPhone />: +91-7489208485
+                <FcCellPhone />: +91-7489208485, <br/> +91-9669438381
                 </Flex>
                 
                 <Box py={"10px"}>
