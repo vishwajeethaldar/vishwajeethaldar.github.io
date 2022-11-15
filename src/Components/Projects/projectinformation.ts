@@ -196,7 +196,7 @@
         links:[
             {
             linkTitle:"GitHub Repo",
-            link:"https://github.com/vishwajeethaldar/upbeat-eggnog-8021"
+            link:"https://github.com/vishwajeethaldar/crickbuzz-clone"
             },
             {
             linkTitle:"Live Clone",
