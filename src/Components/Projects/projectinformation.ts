@@ -5,7 +5,8 @@
             id:1,
             projectTitle:"takeitnow",
             type:"Group Project",
-            techstack:[
+            
+			techstack:[
                 {
                     id:1,
                     title:"TypeScript",
