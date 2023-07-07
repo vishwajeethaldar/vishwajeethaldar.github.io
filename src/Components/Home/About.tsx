@@ -66,8 +66,7 @@ export default function About() {
 
         <Box w={["100%"]}px={["9%", "9%" ,"6%", "15%"]} py="20px">
                 <Text align={"center"} color={themeColor().color1} fontSize={["1.2em"]}>
-                Passion-driven learner and a web developer with the ability to write clean, reusable, optimised code. Skilled in MERN Stack,proficient in working with teams and executing goal-oriented projects. Looking forward to joining a progressive and challenging work environment.
-                </Text>
+                Passionate Software Developer at WLC Technology, dedicated to creating robust and innovative solutions. With a deep love for coding and a curiosity for exploring new technologies.</Text>
         </Box>
    </Flex>
     
