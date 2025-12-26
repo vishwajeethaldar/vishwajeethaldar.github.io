@@ -75,15 +75,15 @@ export interface skeleton {
 export const frontEnd:Array<skeleton> = [
     {
         id:1,
-        title:"HTML5",
-        image:`logo/icons/html5.svg`,
-        url:"https://www.w3.org/html"
+        title:"ReactJs",
+        image:`logo/icons/react.svg`,
+        url:"https://reactjs.org/"
     },
     {
         id:2,
-        title:"CSS3",
-        image:`logo/icons/css3.svg`,
-        url:"https://www.w3.org/Style/CSS/Overview.en.html"
+        title:"NextJs",
+        image:`logo/icons/next.png`,
+        url:"https://nextjs.org/"
     },
     {
         id:3,
@@ -93,72 +93,269 @@ export const frontEnd:Array<skeleton> = [
     },
     {
         id:4,
-        title:"React",
-        image:`logo/icons/react.svg`,
-        url:"https://reactjs.org/"
+        title:"TypeScript",
+        image:`logo/icons/ts.png`,
+        url:"https://www.typescriptlang.org/"
     },
     {
         id:5,
+        title:"HTML5",
+        image:`logo/icons/html5.svg`,
+        url:"https://www.w3.org/html"
+    },
+    {
+        id:6,
+        title:"CSS3",
+        image:`logo/icons/css3.svg`,
+        url:"https://www.w3.org/Style/CSS/Overview.en.html"
+    },
+    {
+        id:7,
+        title:"MUI",
+        image:`logo/icons/chakra-ui.jpg`,
+        url:"https://mui.com/"
+    },
+    {
+        id:8,
         title:"Redux",
         image:`logo/icons/redux.svg`,
         url:"https://redux.js.org/"
     },
     {
-        id:6,
-        title:"NextJs",
-        image:`logo/icons/next.png`,
-        url:"https://nextjs.org/"
+        id:9,
+        title:"Redux Toolkit",
+        image:`logo/icons/redux_tool.svg`,
+        url:"https://redux-toolkit.js.org/"
+    },
+    {
+        id:10,
+        title:"Tailwind",
+        image:`logo/icons/css3.svg`,
+        url:"https://tailwindcss.com/"
+    },
+    {
+        id:11,
+        title:"Chakra UI",
+        image:`logo/icons/chakra-ui.jpg`,
+        url:"https://chakra-ui.com/"
     }
-    
 ]
 
 
 export const backEnd:Array<skeleton> = [
-   
     {
         id:1,
-        title:"Express",
-        image:`logo/icons/express.png`,
-        url:"https://expressjs.com/"
-    },
-    {
-        id:2,
-        title:"NodeJS",
+        title:"NodeJs",
         image:`logo/icons/nodejs.svg`,
         url:"https://nodejs.org/"
     },
     {
-        id:3,
+        id:2,
+        title:"ExpressJs",
+        image:`logo/icons/express.svg`,
+        url:"https://expressjs.com/"
+    }
+]
+
+export const database:Array<skeleton> = [
+    {
+        id:1,
         title:"MongoDB",
-        image:`logo/icons/mongo.png`,
+        image:`logo/icons/mongodb.svg`,
         url:"https://www.mongodb.com/"
     },
     {
-        id:4,
-        title:"NextJs",
-        image:`logo/icons/next.png`,
-        url:"https://nextjs.org/"
+        id:2,
+        title:"MySQL",
+        image:`logo/icons/mongo.png`,
+        url:"https://www.mysql.com/"
+    },
+    {
+        id:3,
+        title:"Redis",
+        image:`logo/icons/mongo.png`,
+        url:"https://redis.io/"
     }
-   
 ]
 
-
-
-export const tools = [
-    
+export const apiWork:Array<skeleton> = [
     {
         id:1,
+        title:"REST APIs",
+        image:`logo/icons/express.svg`,
+        url:"#"
+    },
+    {
+        id:2,
+        title:"Third Party API",
+        image:`logo/icons/express.svg`,
+        url:"#"
+    }
+]
+
+export const integrations:Array<skeleton> = [
+    {
+        id:1,
+        title:"JWT",
+        image:`logo/icons/js.svg`,
+        url:"https://jwt.io/"
+    },
+    {
+        id:2,
+        title:"OAuth",
+        image:`logo/icons/js.svg`,
+        url:"https://oauth.net/"
+    },
+    {
+        id:3,
+        title:"Firebase",
+        image:`logo/icons/js.svg`,
+        url:"https://firebase.google.com/"
+    },
+    {
+        id:4,
+        title:"AdobeSign",
+        image:`logo/icons/js.svg`,
+        url:"https://www.adobe.com/sign.html"
+    },
+    {
+        id:5,
+        title:"DocuSign",
+        image:`logo/icons/js.svg`,
+        url:"https://www.docusign.com/"
+    },
+    {
+        id:6,
+        title:"Ironclad",
+        image:`logo/icons/js.svg`,
+        url:"https://www.ironcladapp.com/"
+    },
+    {
+        id:7,
+        title:"SharePoint",
+        image:`logo/icons/js.svg`,
+        url:"https://www.microsoft.com/sharepoint"
+    },
+    {
+        id:8,
+        title:"OneDrive",
+        image:`logo/icons/js.svg`,
+        url:"https://www.microsoft.com/onedrive"
+    },
+    {
+        id:9,
+        title:"Google Drive",
+        image:`logo/icons/js.svg`,
+        url:"https://www.google.com/drive"
+    },
+    {
+        id:10,
+        title:"Jira",
+        image:`logo/icons/js.svg`,
+        url:"https://www.atlassian.com/software/jira"
+    },
+    {
+        id:11,
+        title:"Google Forms",
+        image:`logo/icons/js.svg`,
+        url:"https://www.google.com/forms"
+    }
+]
+
+export const tools = [
+    {
+        id:1,
+        title:"Git",
+        image:`logo/icons/github.svg`,
+        url:"https://git-scm.com/"
+    },
+    {
+        id:2,
         title:"GitHub",
         image:`logo/icons/github.svg`,
         url:"https://github.com/vishwajeethaldar"
     },
     {
-        id:2,
-        title:"VSCode",
+        id:3,
+        title:"NPM",
+        image:`logo/icons/nodejs.svg`,
+        url:"https://www.npmjs.com/"
+    },
+    {
+        id:4,
+        title:"Postman",
+        image:`logo/icons/vscode.png`,
+        url:"https://www.postman.com/"
+    },
+    {
+        id:5,
+        title:"Thunder Client",
+        image:`logo/icons/vscode.png`,
+        url:"https://www.thunderclient.com/"
+    },
+    {
+        id:6,
+        title:"AWS",
+        image:`logo/icons/vscode.png`,
+        url:"https://aws.amazon.com/"
+    },
+    {
+        id:7,
+        title:"S3",
+        image:`logo/icons/vscode.png`,
+        url:"https://aws.amazon.com/s3/"
+    },
+    {
+        id:8,
+        title:"SES",
+        image:`logo/icons/vscode.png`,
+        url:"https://aws.amazon.com/ses/"
+    },
+    {
+        id:9,
+        title:"PM2",
+        image:`logo/icons/vscode.png`,
+        url:"https://pm2.keymetrics.io/"
+    },
+    {
+        id:10,
+        title:"nginx",
+        image:`logo/icons/vscode.png`,
+        url:"https://www.nginx.com/"
+    },
+    {
+        id:11,
+        title:"Cron Jobs",
         image:`logo/icons/vscode.png`,
         url:"#"
+    },
+    {
+        id:12,
+        title:"Passport",
+        image:`logo/icons/vscode.png`,
+        url:"http://www.passportjs.org/"
+    },
+    {
+        id:13,
+        title:"VSCode",
+        image:`logo/icons/vscode.png`,
+        url:"https://code.visualstudio.com/"
     }
-    
+]
+
+export const other:Array<skeleton> = [
+    {
+        id:1,
+        title:"Wordpress",
+        image:`logo/icons/vscode.png`,
+        url:"https://wordpress.com/"
+    },
+    {
+        id:2,
+        title:"Salesforce UI",
+        image:`logo/icons/vscode.png`,
+        url:"https://www.salesforce.com/"
+    }
 ]
 
 export const problemSolving =[

@@ -1,35 +1,31 @@
-import {Box, Button, Flex, Image } from '@chakra-ui/react'
-import React,{useState}from 'react'
-import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai"
+import {Box, Image } from '@chakra-ui/react'
+import React from 'react'
+import themeColor from '../../utils/Colors'
+
 export default function ProjectImages({image}:{image:Array<string>}) {
-    const [imageC, setImageC]= useState(0)
-
-    const nextSlide = ()=>{
-      if(imageC===image.length-1){
-        setImageC(0)
-      }else{
-        setImageC(projectNo=>projectNo+1)
-      }
+  if (!image || !image.length || !image[0]) {
+    return null
   }
-
-  const prevSlide = ()=>{
-      if(imageC===0){
-        setImageC(image.length-1)
-      }else{
-        setImageC(projectNo=>projectNo-1)
-      }
-  }
-
 
   return (
-    <Box position={"relative"}>
-      <Image w={["100%","100%","100%","600px"]} h={["300px"]} src={image[imageC]} alt={"project Image"}/>
-      <Button _hover={{bg:"none"}} onClick={prevSlide} position={"absolute"} top={"45%"} left={"0px"} colorScheme={"orange"} variant={"outline"}>
-          <AiOutlineDoubleLeft/>
-      </Button>
-      <Button _hover={{bg:"none"}} onClick={nextSlide} position={"absolute"} top={"45%"} right={"0px"} colorScheme={"orange"} variant={"outline"} >
-          <AiOutlineDoubleRight/>
-      </Button>
+    <Box 
+      position="relative" 
+      w="100%" 
+      h="100%"
+      borderRadius="10px"
+      overflow="hidden"
+    >
+      <Image 
+        w="100%" 
+        h="100%" 
+        objectFit="cover"
+        src={image[0]} 
+        alt="project Image"
+        bg={themeColor().bgColor}
+        onError={(e: any) => {
+          e.target.style.display = 'none'
+        }}
+      />
     </Box>
   )
 }

@@ -12,31 +12,47 @@ import { ThemeContext } from "../../context/Theme"
 export const Navbar = ({selected, setSelected}:{selected:string, setSelected:Function}) => {
 
   return (
-    <Box  boxShadow={[`0px 2px 2px ${themeColor().shadowColor}`,`0px 2px 2px ${themeColor().shadowColor}`,'none', 'none']}>
-          {/* <Image src={themeColor().brandLogo} alt={"Brand Logo"} w={["100px"]}/> */}
-        <Show breakpoint='(min-width: 768px)' >
-          <Flex  justify={"center"} py={["0px", "0px", "30px","20px"]} pt={"25px"}>
-            <Box mt={"50px"}>
-            <BrandTitle  fontS={["16px", "18px", "38px", "42px"]}/>
-            </Box>
-            <Box position={"absolute"} top={"30px"} right={"50px"}>
-            <ToggleTheme/>
-            </Box>
-          </Flex>
-      </Show>
+    <Box 
+      bg={themeColor().navaBGColor}
+      backdropFilter="blur(10px)"
+      boxShadow={`0 2px 10px ${themeColor().shadowColor}`}
+      position="sticky"
+      top="0"
+      zIndex="1000"
+    >
       <Show breakpoint='(min-width: 768px)'>
-        <Flex gap="20px" justify={"center"} align={"center"}>
+        <Flex 
+          justify="space-between" 
+          align="center" 
+          px={["20px", "30px", "50px", "80px"]} 
+          py="15px"
+          maxW="1400px"
+          mx="auto"
+        >
+          <Box>
+            <a href="#home">
+              <Text 
+                fontFamily={'PT Serif, serif'} 
+                color={themeColor().color2} 
+                fontWeight="700" 
+                fontSize={["20px", "22px", "24px", "26px"]}
+                _hover={{ 
+                  color: themeColor().color2,
+                  transform: "scale(1.05)",
+                }}
+                transition="all 0.2s"
+                cursor="pointer"
+              >
+                VH
+              </Text>
+            </a>
+          </Box>
+          <Flex align="center" gap="30px">
             <Menus selected={selected} setSelected={setSelected}/>
+            <ToggleTheme/>
+          </Flex>
         </Flex>
       </Show>
-
-     
-       
-      
-      
-      
-
-
     </Box>
   )
 }

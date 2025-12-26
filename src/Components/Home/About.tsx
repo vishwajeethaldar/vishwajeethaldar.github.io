@@ -19,57 +19,92 @@ export default function About() {
   },[inview])
   
   return (
-    <Box  minH={"450px"}>
-        
-      <Box style={inview?insideview:outside} backgroundImage={themeColor().bg1} backgroundSize={"cover"}>
-      <Flex ref={ref} bg={`${themeColor().transparentBG}`} py="30px"  w="100%" justify={"center"} align="center" gap={["10px", "10px","100px","150px"]}   >
-              
-              <Box pl="20px"  p="30px" borderRadius={"20px"}>
-                      <Flex direction={"column"} gap={"10px"}>
-                      
-                      <Text fontFamily={'PT Serif,serif'}  color={themeColor().color4} fontSize={["1.4em","1.4em", "2.4em"]} >
-                          Hi, I am <br/>
-                          Vishwajeet Haldar
-                      </Text>
+    <Box minH={"100vh"} display="flex" flexDirection="column" justifyContent="center" id="home">
+      {/* Hero Section */}
+      <Box style={inview?insideview:outside} minH="90vh" display="flex" alignItems="center" justifyContent="center" px={["20px", "30px", "50px", "100px"]} py="80px">
+        <Flex ref={ref} w="100%" maxW="1200px" direction={["column", "column", "row", "row"]} align="center" justify="center" gap={["40px", "50px", "80px", "100px"]}>
+          {/* Text Content */}
+          <Box flex="1" textAlign={["center", "center", "left", "left"]}>
+            <Text 
+              fontFamily={'PT Serif, serif'}  
+              color={themeColor().color1} 
+              fontSize={["2.5em", "3em", "3.5em", "4em"]} 
+              fontWeight="700"
+              mb="20px"
+              lineHeight="1.2"
+            >
+              Hi, I'm <br/>
+              <Text as="span" color={themeColor().color2}>Vishwajeet Haldar</Text>
+            </Text>
 
-                      <Box color={themeColor().color4}>
-                        <Type />
-                      </Box>
-                      
-                    <Box py="15px" position={"relative"} zIndex="0">
-                        {/* <DonwloadLink path={pdf} title={"Resume"}/> */}
-                        <Download/>
-                    </Box>
-                  </Flex>
+            <Box color={themeColor().color1} fontSize={["1.2em", "1.4em", "1.6em", "1.8em"]} mb="30px" minH="60px">
+              <Type />
+            </Box>
+            
+            <Box py="20px">
+              <Download/>
+            </Box>
+          </Box>
 
-              </Box>
-
-              <Box w={["180px", "180px", "420px"]} borderRadius={"50%"} pr={["20px","20px","",""]} backdropFilter={"blur"} >
-                  <Image w="100%" borderRadius={"50%"} border={`2px solid ${themeColor().shadowColor2}`}  src={`img/profile.png`}  bg={"rgba(1, 16, 41,.5)"}/>
-              </Box>
+          {/* Profile Image */}
+          <Box flex="0 0 auto" w={["250px", "300px", "400px", "450px"]}>
+            <Box
+              position="relative"
+              borderRadius="20px"
+              overflow="hidden"
+              boxShadow={`0 10px 40px ${themeColor().shadowColor}`}
+              _hover={{ transform: "translateY(-5px)", transition: "all 0.3s ease" }}
+            >
+              <Image 
+                w="100%" 
+                borderRadius="20px"
+                src={`img/profile.png`}
+                alt="Vishwajeet Haldar"
+              />
+            </Box>
+          </Box>
         </Flex>
       </Box>
 
-    <Flex  style={inview2?insideview:outside} ref={ref2} id="about" w={["96%","90%","80%","80%"]}  mx={"auto"}  justify={"center"} direction={"column"} my={"50px"}>
-        <Flex z-indexd={0} position={"relative"} w="100%" justify={"center"} align="center" gap="15px" pt="25px">
-            <Box w={["30%","30%","30%","30%"]} borderTop={"3px double #bbb"} >
-
-            </Box>
-
-            <Box id={"about"}>
-                <Text fontSize={["1.4em","1.4em", "2.0em","2.4em"]} color={themeColor().color1}> About Me</Text>
-            </Box>
-
-            <Box w={["30%","30%","30%","30%"]}  borderTop={"3px double #bbb"}>
-            </Box>
-        </Flex>
-
-        <Box w={["100%"]}px={["9%", "9%" ,"6%", "15%"]} py="20px">
-                <Text align={"center"} color={themeColor().color1} fontSize={["1.2em"]}>
-                Passionate Software Developer at WLC Technology, dedicated to creating robust and innovative solutions. With a deep love for coding and a curiosity for exploring new technologies.</Text>
+      {/* About Section */}
+      <Flex style={inview2?insideview:outside} ref={ref2} id="about" w={["95%", "90%", "85%", "80%"]} mx="auto" direction="column" py="100px" gap="50px">
+        <Box textAlign="center">
+          <Text 
+            fontSize={["2em", "2.5em", "3em", "3.5em"]} 
+            color={themeColor().color1}
+            fontWeight="700"
+            fontFamily={'PT Serif, serif'}
+            mb="10px"
+          >
+            About Me
+          </Text>
+          <Box w="60px" h="4px" bg={themeColor().color2} mx="auto" borderRadius="2px"></Box>
         </Box>
-   </Flex>
-    
+
+        <Flex direction={["column", "column", "row", "row"]} gap="50px" align="center">
+          <Box flex="1" order={[2, 2, 1, 1]} maxW={["100%", "100%"]}>
+            <Text 
+              color={themeColor().color1} 
+              fontSize={["1em", "1.1em", "1.15em", "1.2em"]} 
+              lineHeight="1.9"
+              textAlign={["center", "center", "left", "left"]}
+            >
+              Software Developer with 3 years of experience specializing in full-stack web development using the MERN stack. Skilled in building scalable backend services with Node.js, integrating complex third-party APIs, and developing clean, responsive user interfaces. Experienced in contributing to Salesforce projects and collaborating effectively within cross-functional teams. Passionate about writing maintainable code and delivering impactful, high-quality software solutions.
+            </Text>
+          </Box>
+          <Box flex="0 0 350px" order={[1, 1, 2, 2]} display="flex" justifyContent="center">
+            <Image 
+              w="100%" 
+              maxW="350px"
+              borderRadius="15px" 
+              border={`2px solid ${themeColor().shadowColor2}`}  
+              src={`img/profile.png`}  
+              boxShadow={`0 8px 20px ${themeColor().shadowColor}`}
+              _hover={{ transform: "scale(1.02)", transition: "all 0.3s" }}
+            />
+          </Box>
+        </Flex>
+      </Flex>
     </Box>
   )
 }

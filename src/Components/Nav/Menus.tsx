@@ -20,6 +20,14 @@ export const menuslist = [
     id:"skills"
   },
   {
+    name:"Experience",
+    id:"experience"
+  },
+  {
+    name:"Education",
+    id:"education"
+  },
+  {
     name:"Projects",
     id:"projects"
   },
@@ -31,43 +39,83 @@ export const menuslist = [
 
 const Menus = ({selected, setSelected}:{selected:string, setSelected:Function}) => {
  
-  let activeStyle = {
-    color:themeColor().hoverColor1,
-    borderBottom:"1px solid #ccc"
-  };
-
-  let inActiveStyle = {
-    
-  }
-
   const jumpToReleventDiv = (id:string) => {
     const releventDiv = document.getElementById(id);
-    // behavior: "smooth" parameter for smooth movement
     releventDiv?.scrollIntoView({behavior: "smooth"});
   }
 
-
-
- 
   return (
-    <Flex borderBottom={[`1px solid ${themeColor().color3}`,`1px solid ${themeColor().color4}`,"none","none"]} color={themeColor().color1} py={"15px"} gap={"20px"} direction={["column", "column","row", "row"]} align={"center"}>
-
+    <Flex 
+      color={themeColor().color1} 
+      gap={["15px", "20px", "25px", "30px"]} 
+      direction={["column", "column","row", "row"]} 
+      align="center"
+    >
         {menuslist?.map((menu)=>{
+          const isActive = selected === menu.id
           return (
-            <Box key={menu.id}   onClick={()=>jumpToReleventDiv(menu.id)}>
-              <Text fontFamily={'serif,PT Serif'} onClick={()=>setSelected(menu.id)} fontSize={["18px","20px","18px","20px"]} style={selected===menu.id?activeStyle:inActiveStyle}  _hover={{cursor:"pointer",color:themeColor().hoverColor1, transform:"scale(1.05)"}}fontWeight={"500"}>
+            <Box 
+              key={menu.id} 
+              onClick={()=>{
+                jumpToReleventDiv(menu.id)
+                setSelected(menu.id)
+              }}
+              position="relative"
+            >
+              <Text 
+                fontFamily={'PT Serif, serif'} 
+                fontSize={["16px","17px","16px","17px"]} 
+                fontWeight={isActive ? "600" : "500"}
+                color={isActive ? themeColor().color2 : themeColor().color1}
+                cursor="pointer"
+                position="relative"
+                _hover={{ 
+                  color: themeColor().color2,
+                  transform: "translateY(-2px)",
+                }}
+                transition="all 0.2s ease"
+                _after={isActive ? {
+                  content: '""',
+                  position: "absolute",
+                  bottom: "-5px",
+                  left: "0",
+                  right: "0",
+                  height: "2px",
+                  bg: themeColor().color2,
+                  borderRadius: "2px"
+                } : {}}
+              >
                 {menu.name} 
               </Text>
             </Box>
           )
         })}
 
-        <a href="https://github.com/vishwajeethaldar/RESUME/raw/main/Vishwajeet-Haldar-Resume.pdf" target={"_blank"}>
-              <Text fontFamily={'serif,PT Serif'}  fontSize={["18px","20px","18px","20px"]}  _hover={{cursor:"pointer",color:themeColor().hoverColor1, transform:"scale(1.1)" }}fontWeight={"500"}>
-                {"Resume"} 
-              </Text>
-        </a>
-        
+        <Box
+          as="a"
+          href="https://github.com/vishwajeethaldar/RESUME/raw/main/Vishwajeet-Haldar-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          px="15px"
+          py="8px"
+          borderRadius="8px"
+          bg={themeColor().color2}
+          color={themeColor().bgColor}
+          _hover={{
+            bg: themeColor().color3,
+            transform: "translateY(-2px)",
+            boxShadow: `0 4px 8px ${themeColor().shadowColor}`
+          }}
+          transition="all 0.2s ease"
+        >
+          <Text 
+            fontFamily={'PT Serif, serif'} 
+            fontSize={["14px","15px","14px","15px"]} 
+            fontWeight="600"
+          >
+            Resume
+          </Text>
+        </Box>
     </Flex>
   )
 }

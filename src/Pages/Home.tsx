@@ -1,4 +1,4 @@
-import { AboutSection, MobileNav, Navbar, StickyNav } from "../Components"
+import { AboutSection, MobileNav, Navbar, StickyNav, Experience, Education } from "../Components"
 import themeColor from '../utils/Colors'
 import {Box,Show} from '@chakra-ui/react';
 import { useEffect, useState, useContext, useRef} from "react";
@@ -44,36 +44,62 @@ useEffect(()=>{
   return (
     <Box  bg={themeColor().bgColor} minH={"100vh"} id={"home"}>
       
-     
-     <Box ref={navRef} style={navRefView?insideview:outside}>
-        <Navbar selected={selected} setSelected={setSelected}/>
-     </Box>
+     {/* Desktop Navbar - Sticky */}
+     <Show breakpoint='(min-width: 768px)'>
+       <Box ref={navRef}>
+         <Navbar selected={selected} setSelected={setSelected}/>
+       </Box>
+     </Show>
       
-     <Box style={scrollH>204?insideview:outside} display={scrollH>204?"block":"none"} backdropFilter={"blur"} position={"sticky"} top={"0px"} zIndex={"10"} transition={"background-color .5s ease"}>
-          <StickyNav selected={selected} setSelected={setSelected}/>
-      </Box>
+     {/* Sticky Nav on Scroll - Desktop */}
+     <Show breakpoint='(min-width: 768px)'>
+       <Box 
+         style={scrollH>204?insideview:outside} 
+         display={scrollH>204?"block":"none"} 
+         position="sticky" 
+         top="0px" 
+         zIndex="1000"
+       >
+         <StickyNav selected={selected} setSelected={setSelected}/>
+       </Box>
+     </Show>
 
-       <Show breakpoint='(max-width: 767px)'  >
-        <Box position={"sticky"} top={"0px"} backdropFilter={"blur"} zIndex={"10"} bg={themeColor().navaBGColor}>
-          <MobileNav selected={selected} setSelected={setSelected}/>
-        </Box>
-      </Show>
+     {/* Mobile Navbar */}
+     <Show breakpoint='(max-width: 767px)'>
+       <Box 
+         position="sticky" 
+         top="0px" 
+         zIndex="1000" 
+         bg={themeColor().navaBGColor}
+         backdropFilter="blur(10px)"
+         boxShadow={`0 2px 10px ${themeColor().shadowColor}`}
+       >
+         <MobileNav selected={selected} setSelected={setSelected}/>
+       </Box>
+     </Show>
       
        <Box>
        
           <AboutSection />
       </Box>
 
-      <Box id={"skills"} minH={"400px"} > 
+      <Box id={"skills"} py="50px"> 
           <Skills/>
       </Box>  
 
+      <Box id={"experience"}> 
+          <Experience/>
+      </Box>
+
+      <Box id={"education"}> 
+          <Education/>
+      </Box>
       
-        <Box id={"projects"} minH={"400px"} w={"100%"} > 
+        <Box id={"projects"}> 
           <Projects/>
         </Box> 
 
-        <Box ref={contactRef} style={contactRefView?insideview:outside} id={"contact"} minH={"350px"}  > 
+        <Box ref={contactRef} style={contactRefView?insideview:outside} id={"contact"} py="100px"> 
           <Contact/>
         </Box> 
 
