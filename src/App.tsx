@@ -1,15 +1,16 @@
-
-import MainRoutes from './Routes/MainRoutes';
-import Loder from './utils/Loder';
-
+import './App.css'
+import AppContainer from '##/src/components/appcontainer/AppContainer.tsx'
+import { BrowserRouter } from "react-router";
 
 function App() {
 
+
   return (
-    <div>
-     <Loder/>
-     <MainRoutes />
-    </div>
+    <>
+    <BrowserRouter>
+      <AppContainer />    
+    </BrowserRouter>  
+    </>
   )
 }
 

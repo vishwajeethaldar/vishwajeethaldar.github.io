@@ -1,56 +1,143 @@
-import { Box, Flex, Stack, Text} from "@chakra-ui/react";
-import { ContactForm } from "./ContactForm";
-import { TfiEmail} from "react-icons/tfi"
-import {FcCellPhone} from "react-icons/fc"
-import themeColor from "../../utils/Colors";
-import { SocialLink } from "../footer/SocialLink";
-export default function Contact() {
+import { X } from "lucide-react";
+import { useEffect } from "react";
+
+type Props = {
+  open: boolean;
+  onClose: () => void;
+};
+
+export default function ContactModal({ open, onClose }: Props) {
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
+
+  if (!open) return null;
+
   return (
+    <div className="relative w-full h-full">
+        <div
+            className="fixed top-[40vh] inset-0 z-[100] flex items-center justify-center"
+            onClick={onClose}
+            >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-fadeIn" />
 
-    <Box>
+            {/* Modal */}
+            <div
+                onClick={(e) => e.stopPropagation()}
+                className="
+                relative
+                w-full max-w-md
+                bg-white
+                rounded-2xl
+                shadow-2xl
+                p-8
+                animate-scaleIn
+                "
+            >
+                {/* Close Button */}
+                <button
+                onClick={onClose}
+                className="absolute top-4 right-4 text-gray-500 hover:text-black transition cursor-pointer"
+                >
+                <X size={20} />
+                </button>
 
-        <Box mx={"auto"} mb={"10px"} w={["96%", "96%", "80%", "80%"]} px={["15xp", "15px", "20px", "10px"]}>
-            <Text fontFamily={'PT Serif, serif'} py={"5px"} textAlign={"center"}color={themeColor().color1}  fontSize={["1.8em","1.8em","1.8em"]} fontWeight={"700"}>
-                    {"Contact Me"}
-            </Text>
-        </Box>
+                <h3 className="text-2xl font-semibold mb-6">
+                Contact Me
+                </h3>
 
-    <Flex w={"100%"} justify={"center"} direction={["column","column","row","row"]}>
+                <form className="space-y-5">
 
-        
-        <Box w={["90%","90%","20%","20%"]} px={["20px","20px","0px","0px"]}>
-          
-            <Stack color={themeColor().color1}> 
-                <Flex direction={"column"} pt={"25px"}>
-                <Text   fontSize={"2xl"} fontWeight={"700"}>
-                    Have an idea?
-                </Text>
-                <Text   fontSize={"2xl"} fontWeight={"700"}>
-                    Let's make something great!
-                </Text>
-                </Flex>
-                <Text   fontSize={"3xl"}>
-                    Contact Details
-                </Text>
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="
+                    w-full
+                    border border-gray-300
+                    rounded-lg
+                    px-4 py-2.5
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-black
+                    transition
+                    "
+                />
 
-                <Flex   justify={"flex-start"} align={"center"}>
-                <TfiEmail /> {"   : " +" onlyjeet3@gmail.com"}
-                </Flex>
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="
+                    w-full
+                    border border-gray-300
+                    rounded-lg
+                    px-4 py-2.5
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-black
+                    transition
+                    "
+                />
 
-                <Flex   justify={"flex-start"} align={"center"}>
-                <FcCellPhone />: +91-7489208485, <br/> +91-9669438381
-                </Flex>
-                
-                <Box py={"10px"}>
-                    <SocialLink />
-                </Box>
-            </Stack>
-        </Box>
+                <textarea
+                    rows={4}
+                    placeholder="Your Message"
+                    className="
+                    w-full
+                    border border-gray-300
+                    rounded-lg
+                    px-4 py-2.5
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-black
+                    transition
+                    resize-none
+                    "
+                />
 
-        <Box w={["100%","100%","50%","50%"]}>
-            <ContactForm />
-        </Box>
-    </Flex>
-    </Box>
-  )
+                <button
+                    type="submit"
+                    className="
+                    w-full
+                    bg-black
+                    text-white
+                    py-2.5
+                    rounded-lg
+                    font-medium
+                    hover:opacity-90
+                    transition
+                    cursor-pointer
+                    "
+                >
+                    Send Message
+                </button>
+                </form>
+            </div>
+
+            {/* Animations */}
+            <style>
+                {`
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes scaleIn {
+                    from { opacity: 0; transform: scale(0.95); }
+                    to { opacity: 1; transform: scale(1); }
+                }
+                .animate-fadeIn {
+                    animation: fadeIn 0.25s ease;
+                }
+                .animate-scaleIn {
+                    animation: scaleIn 0.25s ease;
+                }
+                `}
+            </style>
+            </div>
+    </div>
+  );
 }
